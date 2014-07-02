@@ -26,11 +26,14 @@ for ( var i = 0; i < data.length; i++ ) {
 // Create a readable stream:
 var readStream = eventStream.readArray( data );
 
-// Create a new stream:
+// Create a new variance stream:
 var stream = vStream().stream();
 
 // Pipe the data:
 readStream.pipe( stream )
+	.pipe( eventStream.map( function( d, clbk ){
+		clbk( null, d.toString() );
+	}))
 	.pipe( process.stdout );
 ```
 
