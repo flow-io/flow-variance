@@ -1,6 +1,6 @@
 {
   "name": "flow-variance",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Reduce transform stream which calculates the variance of streamed data.",
   "author": {
     "name": "Athan Reines",
